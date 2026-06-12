@@ -79,14 +79,15 @@ function type() {
 setTimeout(type, 600);
 
 /* ── HOME BUTTONS ────────────────────────────────────────── */
+const resumeOverlay = document.getElementById('resume-overlay');
 document.getElementById('dl-resume').addEventListener('click', () => {
-  // Try a real download of the resume txt as a demo
-  const a = document.createElement('a');
-  a.href = 'resume_mehran.txt';
-  a.download = 'resume_mehran.txt';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
+  resumeOverlay.classList.add('open');
+});
+document.getElementById('resume-close').addEventListener('click', () => {
+  resumeOverlay.classList.remove('open');
+});
+resumeOverlay.addEventListener('click', e => {
+  if (e.target === resumeOverlay) resumeOverlay.classList.remove('open');
 });
 
 document.getElementById('explore-projects').addEventListener('click', () => {

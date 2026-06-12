@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="assets/icons/favicon.png">
 </head>
 <body>
 
@@ -211,7 +212,7 @@
 
             <div class="btn-row">
               <button class="pixel-btn primary" id="dl-resume">
-                <i class="fa fa-download"></i> Resume
+                <i class="fa fa-eye"></i> Resume
               </button>
               <button class="pixel-btn secondary" id="explore-projects">
                 <i class="fa fa-gamepad"></i> Projects
@@ -308,7 +309,9 @@
 
         <div class="github-card pixel-card" style="max-width:520px; margin:0 auto;">
           <div class="gh-avatar-row">
-            <div class="gh-pixel-logo">🐙</div>
+            <div class="gh-pixel-logo">
+              <img src="assets/images/github.png" alt="GitHub" style="width:48px; height:48px; image-rendering:pixelated;">
+            </div>
             <div class="gh-info">
               <div class="gh-username">@mehranredrose</div>
               <div class="gh-tagline">Full-stack &amp; systems engineer · OSS builder</div>
@@ -393,7 +396,20 @@
         </div>
       </div>
     </section>
-
+    <div class="resume-overlay" id="resume-overlay">
+      <div class="resume-modal">
+        <div class="resume-modal-bar">
+          <span>📄 Mehran-Abbasi-Resume.pdf</span>
+          <div class="resume-modal-btns">
+            <a href="Resume/Mehran-Abbasi-Resume.pdf" download class="pixel-btn secondary" style="font-size:0.38rem; padding:0.4rem 0.6rem;">
+              <i class="fa fa-download"></i> Download
+            </a>
+            <button class="pixel-btn secondary" id="resume-close" style="font-size:0.38rem; padding:0.4rem 0.6rem;">✕ Close</button>
+          </div>
+        </div>
+        <iframe src="Resume/Mehran-Abbasi-Resume.pdf" class="resume-frame" title="Resume"></iframe>
+      </div>
+    </div>
   </main>
 
   <footer class="pixel-footer">

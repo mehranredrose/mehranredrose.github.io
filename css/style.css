@@ -659,3 +659,45 @@ body::after {
   .pixel-btn  { justify-content:center; }
   .gh-stats   { flex-direction:column; }
 }
+.resume-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.resume-overlay.open { display: flex; }
+
+.resume-modal {
+  width: 100%;
+  max-width: 860px;
+  height: 90vh;
+  background: var(--card-bg);
+  border: 3px solid var(--accent);
+  box-shadow: 8px 8px 0 var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+.resume-modal-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  background: var(--bg-3);
+  border-bottom: 2px solid var(--accent);
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.42rem;
+  color: var(--accent);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.resume-modal-btns { display: flex; gap: 0.5rem; }
+.resume-frame {
+  flex: 1;
+  width: 100%;
+  border: none;
+  background: #fff;
+}
