@@ -1,0 +1,53 @@
+MEHRAN RED ROSE
+Software Engineer — Full-Stack & Systems
+════════════════════════════════════════
+mehranredrose@gmail.com
+github.com/mehranredrose
+linkedin.com/in/mehranredrose
+x.com/mehranredrose
+
+SUMMARY
+───────
+Full-stack and systems-level engineer focused on building
+production-grade open-source software. Specializes in
+desktop applications, backend microservices, and network
+tooling across macOS and Linux.
+
+PROJECTS
+────────
+WARPture (2024–present)
+  Cloudflare WARP GUI manager with per-app split tunneling
+  for macOS and Linux.
+  Stack: Electron + React (frontend), Go (tunnel agent),
+  Python (process monitor). Full CI/CD via GitHub Actions.
+
+ZAP Social Network Backend (2024)
+  Production-grade Django microservices backend designed
+  for 10M+ DAU. Covers auth, feed ranking, media, social
+  graph, moderation, notifications, and observability.
+  Kubernetes + full CI/CD configuration included.
+
+macOS VPN Application (2023)
+  Swift 5.9 + SwiftUI VPN app modeled after Cloudflare
+  WARP. Network Extensions (NEPacketTunnelProvider,
+  NEAppRule), pfctl anchor rules, SMJobBless privileged
+  helpers, notarization + release pipeline.
+
+SKILLS
+──────
+Languages  : Go, Python, JavaScript/TypeScript, Swift, Shell
+Frameworks : Electron, React, FastAPI, Django
+Infra      : Docker, Kubernetes, GitHub Actions, systemd
+Platforms  : macOS, Linux (Debian/Arch), GitHub Pages
+Tooling    : git, tmux, neovim, pfctl, WireGuard
+
+EDUCATION
+─────────
+[Add your education details here]
+
+INTERESTS
+─────────
+Open-source software · Network protocols · Systems programming
+Coffee · Pixel art · Retro hardware
+
+NOTE: Replace this file with your real resume PDF.

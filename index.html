@@ -1,171 +1,405 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mehran RedRose</title>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mehranredrose.github.io</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="https://unpkg.com/lucide@latest"></script>
-  </head>
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav class="navbar" id="navbar">
 
-  <body>
-    <section class="hero">
-      <div class="hero-content container">
-        <div class="avatar-container">
-          <img
-            src="assets/images/avatar.jpg"
-            alt="Mehran RedRose"
-            class="avatar"
-          />
+    <!-- Nintendo-style brand logo -->
+    <div class="nav-brand" id="nav-brand-logo" title="mehranredrose.github.io">
+      <svg class="nes-logo" viewBox="0 0 54 20" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+        <!-- cartridge body -->
+        <rect x="1" y="2" width="52" height="16" fill="#E84A2F"/>
+        <rect x="3" y="1" width="48" height="18" fill="#E84A2F"/>
+        <!-- label area -->
+        <rect x="4" y="4" width="46" height="12" fill="#FEF0D9"/>
+        <!-- label text pixels - M R R -->
+        <rect x="6"  y="6" width="2" height="8" fill="#3A2C1F"/>
+        <rect x="8"  y="6" width="2" height="2" fill="#3A2C1F"/>
+        <rect x="10" y="6" width="2" height="8" fill="#3A2C1F"/>
+        <!-- R -->
+        <rect x="14" y="6" width="2" height="8" fill="#3A2C1F"/>
+        <rect x="16" y="6" width="3" height="2" fill="#3A2C1F"/>
+        <rect x="19" y="6" width="2" height="3" fill="#3A2C1F"/>
+        <rect x="16" y="9" width="3" height="2" fill="#3A2C1F"/>
+        <rect x="18" y="11" width="3" height="3" fill="#3A2C1F"/>
+        <!-- R -->
+        <rect x="23" y="6" width="2" height="8" fill="#3A2C1F"/>
+        <rect x="25" y="6" width="3" height="2" fill="#3A2C1F"/>
+        <rect x="28" y="6" width="2" height="3" fill="#3A2C1F"/>
+        <rect x="25" y="9" width="3" height="2" fill="#3A2C1F"/>
+        <rect x="27" y="11" width="3" height="3" fill="#3A2C1F"/>
+        <!-- Nintendo-style 4 color buttons -->
+        <rect x="35" y="7"  width="3" height="3" rx="0" fill="#A3E635"/><!-- green -->
+        <rect x="39" y="7"  width="3" height="3" fill="#38BDF8"/><!-- blue -->
+        <rect x="35" y="11" width="3" height="3" fill="#FBBF24"/><!-- yellow -->
+        <rect x="39" y="11" width="3" height="3" fill="#E84A2F" style="filter:brightness(0.5)"/><!-- red (darker on red bg) -->
+        <!-- cart notch bottom -->
+        <rect x="18" y="18" width="18" height="3" fill="#C73D24"/>
+      </svg>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+
+    <ul class="nav-links" id="nav-links">
+      <li>
+        <a href="#home" class="nav-item active" data-section="home">
+          <img src="assets/icons/home.svg"     class="nav-icon" alt=""/> Home
+        </a>
+      </li>
+      <li>
+        <a href="#blog" class="nav-item" data-section="blog">
+          <img src="assets/icons/blog.svg"     class="nav-icon" alt=""/> Blog
+        </a>
+      </li>
+      <li>
+        <a href="#docs" class="nav-item" data-section="docs">
+          <img src="assets/icons/docs.svg"     class="nav-icon" alt=""/> Docs
+        </a>
+      </li>
+      <li>
+        <a href="#github-section" class="nav-item" data-section="github-section">
+          <img src="assets/icons/github.svg"   class="nav-icon" alt=""/> Github
+        </a>
+      </li>
+      <li>
+        <a href="#projects" class="nav-item" data-section="projects">
+          <img src="assets/icons/projects.svg" class="nav-icon" alt=""/> Projects
+        </a>
+      </li>
+      <li>
+        <a href="#contacts" class="nav-item" data-section="contacts">
+          <img src="assets/icons/contacts.svg" class="nav-icon" alt=""/> Contacts
+        </a>
+      </li>
+    </ul>
+
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+      <span id="toggle-icon">☀️</span>
+    </button>
+  </nav>
+
+  <!-- ══════════════ MAIN ══════════════ -->
+  <main class="main-content">
+
+    <!-- ═══ HOME ═══ -->
+    <section id="home" class="section active">
+      <div class="section-inner centered">
+
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">// mehranredrose.github.io</span>
         </div>
-        <h1 class="logo">MEHRAN</h1>
 
-        <p class="subtitle">
-          Full‑Stack Developer • Music Platform Architect • Open Source Builder
-          <br />
-          Inspired by futuristic neon interfaces.
+        <div class="home-grid pixel-card" style="margin-top:0; border-top:none;">
+          <div class="home-left">
+            <div class="pixel-avatar">
+              <!-- Nintendo-style pixel art character: slick hair, shades, open collar -->
+              <div class="avatar-art">
+                <svg viewBox="0 0 24 40" width="96" height="160"
+                     xmlns="http://www.w3.org/2000/svg"
+                     shape-rendering="crispEdges"
+                     style="display:block; image-rendering:pixelated;">
+
+                  <!-- HAIR — swept back, dark -->
+                  <rect x="5"  y="0"  width="14" height="2" fill="#1A0A00"/>
+                  <rect x="3"  y="1"  width="18" height="2" fill="#1A0A00"/>
+                  <rect x="3"  y="2"  width="3"  height="3" fill="#1A0A00"/>
+                  <rect x="18" y="2"  width="3"  height="2" fill="#1A0A00"/>
+                  <!-- hair swoop left -->
+                  <rect x="2"  y="3"  width="4"  height="2" fill="#1A0A00"/>
+
+                  <!-- SKIN — face -->
+                  <rect x="6"  y="3"  width="12" height="10" fill="#D4956A"/>
+                  <rect x="5"  y="4"  width="14" height="8"  fill="#D4956A"/>
+                  <rect x="4"  y="5"  width="16" height="6"  fill="#D4956A"/>
+
+                  <!-- SUNGLASSES frame — cool black band -->
+                  <rect x="4"  y="6"  width="16" height="3"  fill="#111111"/>
+                  <!-- left lens tint -->
+                  <rect x="5"  y="6"  width="6"  height="3"  fill="#0A2A3A"/>
+                  <!-- right lens tint -->
+                  <rect x="13" y="6"  width="6"  height="3"  fill="#0A2A3A"/>
+                  <!-- lens shine -->
+                  <rect x="6"  y="7"  width="1"  height="1"  fill="#5BD0FF" opacity="0.8"/>
+                  <rect x="14" y="7"  width="1"  height="1"  fill="#5BD0FF" opacity="0.8"/>
+                  <!-- bridge -->
+                  <rect x="11" y="7"  width="2"  height="1"  fill="#333333"/>
+
+                  <!-- NOSE -->
+                  <rect x="11" y="10" width="2"  height="2"  fill="#BA7A50"/>
+
+                  <!-- SMIRK — slight grin right side -->
+                  <rect x="9"  y="12" width="6"  height="1"  fill="#7A3020"/>
+                  <rect x="14" y="11" width="2"  height="1"  fill="#7A3020"/>
+
+                  <!-- EAR highlights -->
+                  <rect x="4"  y="7"  width="1"  height="3"  fill="#C0845A"/>
+                  <rect x="19" y="7"  width="1"  height="3"  fill="#C0845A"/>
+
+                  <!-- NECK -->
+                  <rect x="10" y="13" width="4"  height="3"  fill="#D4956A"/>
+
+                  <!-- SHIRT — open collar, dark jacket -->
+                  <rect x="4"  y="15" width="16" height="14" fill="#1C1C2E"/>
+                  <!-- collar left -->
+                  <rect x="4"  y="15" width="5"  height="6"  fill="#F5F0E8"/>
+                  <!-- collar right -->
+                  <rect x="15" y="15" width="5"  height="6"  fill="#F5F0E8"/>
+                  <!-- chest gap / shirt interior -->
+                  <rect x="9"  y="16" width="6"  height="8"  fill="#E8C547" opacity="0.25"/>
+                  <!-- jacket lapel shadow -->
+                  <rect x="8"  y="15" width="2"  height="9"  fill="#111122"/>
+                  <rect x="14" y="15" width="2"  height="9"  fill="#111122"/>
+                  <!-- jacket buttons -->
+                  <rect x="11" y="20" width="2"  height="1"  fill="#888"/>
+                  <rect x="11" y="23" width="2"  height="1"  fill="#888"/>
+                  <!-- jacket shoulder line -->
+                  <rect x="4"  y="15" width="16" height="1"  fill="#2A2A3E"/>
+
+                  <!-- ARMS -->
+                  <rect x="1"  y="16" width="4"  height="10" fill="#1C1C2E"/>
+                  <rect x="19" y="16" width="4"  height="10" fill="#1C1C2E"/>
+                  <!-- hands -->
+                  <rect x="1"  y="25" width="4"  height="3"  fill="#D4956A"/>
+                  <rect x="19" y="25" width="4"  height="3"  fill="#D4956A"/>
+
+                  <!-- LEGS / PANTS — dark -->
+                  <rect x="7"  y="29" width="4"  height="11" fill="#0A0A18"/>
+                  <rect x="13" y="29" width="4"  height="11" fill="#0A0A18"/>
+                  <!-- belt -->
+                  <rect x="6"  y="28" width="12" height="2"  fill="#4A3010"/>
+                  <rect x="10" y="28" width="4"  height="2"  fill="#E8A020"/>
+
+                  <!-- SHOES -->
+                  <rect x="6"  y="39" width="6"  height="1"  fill="#111111"/>
+                  <rect x="12" y="39" width="6"  height="1"  fill="#111111"/>
+                </svg>
+              </div>
+              <div class="avatar-name">MRR.exe</div>
+            </div>
+          </div>
+
+          <div class="home-right">
+            <div class="type-line">
+              <span class="prompt">$ </span><span id="typed-cmd"></span><span class="cursor-blink">█</span>
+            </div>
+            <h1 class="hero-title">MEHRAN<br><span class="accent-text">RED ROSE</span></h1>
+            <div class="pixel-divider">══════════════════</div>
+            <p class="about-text">
+              Full-stack &amp; systems engineer. I build production-grade open-source
+              software — desktop apps, backend microservices, network tooling.
+              Currently shipping <strong>WARPture</strong>: a Cloudflare WARP GUI
+              with per-app split tunneling for macOS &amp; Linux.
+            </p>
+            <p class="about-text">
+              Based on planet Earth. Hosted at
+              <code class="inline-code">mehranredrose.github.io</code>.
+            </p>
+
+            <div class="btn-row">
+              <button class="pixel-btn primary" id="dl-resume">
+                <i class="fa fa-download"></i> Resume
+              </button>
+              <button class="pixel-btn secondary" id="explore-projects">
+                <i class="fa fa-gamepad"></i> Projects
+              </button>
+            </div>
+
+            <!-- compact contact chips -->
+            <div class="contact-chips">
+              <a href="mailto:mehranredrose@gmail.com" class="chip" title="Email">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/mehranredrose" target="_blank" rel="noopener noreferrer" class="chip" title="LinkedIn">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://x.com/mehranredrose" target="_blank" rel="noopener noreferrer" class="chip" title="X / Twitter">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="https://github.com/mehranredrose" target="_blank" rel="noopener noreferrer" class="chip" title="GitHub">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a href="https://mehranredrose.hashnode.dev/" target="_blank" rel="noopener noreferrer" class="chip" title="Blog">
+                <i class="fa-solid fa-rss"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-hint">▼ scroll or click nav ▼</div>
+      </div>
+    </section>
+
+    <!-- ═══ BLOG ═══ -->
+    <section id="blog" class="section">
+      <div class="section-inner centered">
+        <h2 class="section-title"><span class="title-icon">
+          <img src="assets/icons/blog.svg" class="section-icon-img" alt=""/>
+        </span> BLOG</h2>
+        <div class="pixel-divider">══════════════════</div>
+
+        <div class="blog-card pixel-card" style="max-width:580px; margin:0 auto; text-align:center;">
+          <div class="blog-icon">📰</div>
+          <h3 class="blog-tagline">DEV BLOG — EXTERNAL STATION</h3>
+          <p class="body-text">
+            Full articles, deep-dives, and build logs live on my Hashnode blog.
+            Covers Go, Electron, Python, systems programming, open-source journeys,
+            and the occasional rant about package managers.
+          </p>
+          <div class="pixel-separator">- - - - - - - - - - - - - -</div>
+          <a href="https://mehranredrose.hashnode.dev/" target="_blank" rel="noopener noreferrer"
+             class="pixel-btn primary blog-cta">
+            📰 Journey to my dev blog →
+          </a>
+          <p class="hint-text">↗ Opens in new tab · Full articles on Hashnode</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ DOCS ═══ -->
+    <section id="docs" class="section">
+      <div class="section-inner centered">
+        <h2 class="section-title"><span class="title-icon">
+          <img src="assets/icons/docs.svg" class="section-icon-img" alt=""/>
+        </span> DOCS</h2>
+        <div class="pixel-divider">══════════════════</div>
+        <p class="body-text" style="text-align:center; margin-bottom:2rem;">
+          Documentation hub. Each category maps to
+          <code class="inline-code">mehranredrose.github.io/Docs/&lt;topic&gt;</code>.
         </p>
 
-        <div class="hero-buttons">
-          <a class="btn" href="#projects">Explore Projects</a>
-          <a class="btn" href="resume/mehran-redrose-resume.pdf" download>
-            Download Resume
+        <div class="docs-layout">
+          <div class="docs-sidebar pixel-card">
+            <div class="tree-header">📂 CATEGORIES</div>
+            <ul class="doc-tree" id="doc-tree">
+              <li class="doc-cat active-cat" data-cat="python">   <span class="tree-arrow">▶</span> Python     </li>
+              <li class="doc-cat" data-cat="js">                  <span class="tree-arrow">▶</span> JavaScript </li>
+              <li class="doc-cat" data-cat="go">                  <span class="tree-arrow">▶</span> Go         </li>
+              <li class="doc-cat" data-cat="linux">               <span class="tree-arrow">▶</span> Linux Tips </li>
+              <li class="doc-cat" data-cat="electron">            <span class="tree-arrow">▶</span> Electron   </li>
+              <li class="doc-cat" data-cat="networking">          <span class="tree-arrow">▶</span> Networking </li>
+            </ul>
+          </div>
+          <div class="docs-content pixel-card" id="docs-content"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ GITHUB ═══ -->
+    <section id="github-section" class="section">
+      <div class="section-inner centered">
+        <h2 class="section-title"><span class="title-icon">
+          <img src="assets/icons/github.svg" class="section-icon-img" alt=""/>
+        </span> GITHUB</h2>
+        <div class="pixel-divider">══════════════════</div>
+
+        <div class="github-card pixel-card" style="max-width:520px; margin:0 auto;">
+          <div class="gh-avatar-row">
+            <div class="gh-pixel-logo">🐙</div>
+            <div class="gh-info">
+              <div class="gh-username">@mehranredrose</div>
+              <div class="gh-tagline">Full-stack &amp; systems engineer · OSS builder</div>
+            </div>
+          </div>
+          <div class="pixel-separator">- - - - - - - - - - - - - -</div>
+          <div class="gh-stats">
+            <div class="stat-box">
+              <span class="stat-val" id="gh-repos">--</span>
+              <span class="stat-label">REPOS</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-val" id="gh-followers">--</span>
+              <span class="stat-label">FOLLOWERS</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-val" id="gh-following">--</span>
+              <span class="stat-label">FOLLOWING</span>
+            </div>
+          </div>
+          <a href="https://github.com/mehranredrose" target="_blank" rel="noopener noreferrer"
+             class="pixel-btn primary gh-cta">
+            <i class="fa-brands fa-github"></i> Visit GitHub Profile →
           </a>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-
-        <div class="card">
-          <p>
-            I'm Mehran RedRose — a developer focused on scalable backend
-            systems, music streaming architecture, UI engineering, and modern
-            web platforms. This portfolio is a futuristic neon-inspired static
-            GitHub Page template.
-          </p>
-        </div>
-      </div>
-    </section>
-
+    <!-- ═══ PROJECTS ═══ -->
     <section id="projects" class="section">
-      <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
-
-        <div class="grid">
-          <div class="card">
-            <h3>VAYU</h3>
-            <p>Cross-platform music aggregation & streaming ecosystem.</p>
-
-            <a
-              class="repo-link"
-              href="https://github.com/mehranredrose"
-              target="_blank"
-            >
-              <i data-lucide="github"></i>
-              GitHub
-            </a>
-          </div>
-
-          <div class="card">
-            <h3>Orphé</h3>
-            <p>Mythology-inspired collaborative music platform concept.</p>
-
-            <a
-              class="repo-link"
-              href="https://github.com/mehranredrose"
-              target="_blank"
-            >
-              <i data-lucide="github"></i>
-              GitHub
-            </a>
-          </div>
-
-          <div class="card">
-            <h3>Placeholder Repo</h3>
-            <p>Replace this section later with your real repositories.</p>
-
-            <a class="repo-link" href="projects.html">
-              <i data-lucide="folder"></i>
-              Projects Page
-            </a>
-          </div>
-        </div>
+      <div class="section-inner centered">
+        <h2 class="section-title"><span class="title-icon">
+          <img src="assets/icons/projects.svg" class="section-icon-img" alt=""/>
+        </span> PROJECTS</h2>
+        <div class="pixel-divider">══════════════════</div>
+        <p class="body-text" id="projects-status" style="text-align:center;">Loading repos from GitHub API…</p>
+        <div class="projects-grid" id="projects-grid"></div>
       </div>
     </section>
 
-    <section id="skills" class="section">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
-
-        <div class="skills">
-          <div class="skill">Python</div>
-          <div class="skill">Django</div>
-          <div class="skill">JavaScript</div>
-          <div class="skill">React</div>
-          <div class="skill">API Design</div>
-          <div class="skill">PostgreSQL</div>
-          <div class="skill">Docker</div>
-          <div class="skill">Linux</div>
-        </div>
-      </div>
-    </section>
-
+    <!-- ═══ CONTACTS ═══ -->
     <section id="contacts" class="section">
-      <div class="container">
-        <h2 class="section-title">Contacts</h2>
+      <div class="section-inner centered">
+        <h2 class="section-title"><span class="title-icon">
+          <img src="assets/icons/contacts.svg" class="section-icon-img" alt=""/>
+        </span> CONTACTS</h2>
+        <div class="pixel-divider">══════════════════</div>
 
-        <div class="card">
-          <div class="contact-links">
-            <a href="mailto:mehranredrose@gmail.com">
-              <i data-lucide="mail"></i>
-              mehranredrose@gmail.com
+        <div class="contacts-card pixel-card" style="max-width:580px; margin:0 auto;">
+          <div class="contacts-grid">
+            <a href="mailto:mehranredrose@gmail.com" class="contact-row">
+              <span class="contact-row-icon"><i class="fa-solid fa-envelope"></i></span>
+              <span class="contact-row-label">EMAIL</span>
+              <span class="contact-row-value">mehranredrose@gmail.com</span>
             </a>
-
-            <a href="https://github.com/mehranredrose" target="_blank">
-              <i data-lucide="github"></i>
-              github.com/mehranredrose
+            <a href="https://www.linkedin.com/in/mehranredrose" target="_blank" rel="noopener noreferrer" class="contact-row">
+              <span class="contact-row-icon"><i class="fa-brands fa-linkedin"></i></span>
+              <span class="contact-row-label">LINKEDIN</span>
+              <span class="contact-row-value">in/mehranredrose</span>
             </a>
+            <a href="https://x.com/mehranredrose" target="_blank" rel="noopener noreferrer" class="contact-row">
+              <span class="contact-row-icon"><i class="fa-brands fa-x-twitter"></i></span>
+              <span class="contact-row-label">X / TWITTER</span>
+              <span class="contact-row-value">@mehranredrose</span>
+            </a>
+            <a href="https://github.com/mehranredrose" target="_blank" rel="noopener noreferrer" class="contact-row">
+              <span class="contact-row-icon"><i class="fa-brands fa-github"></i></span>
+              <span class="contact-row-label">GITHUB</span>
+              <span class="contact-row-value">mehranredrose</span>
+            </a>
+            <a href="https://mehranredrose.hashnode.dev/" target="_blank" rel="noopener noreferrer" class="contact-row">
+              <span class="contact-row-icon"><i class="fa-solid fa-rss"></i></span>
+              <span class="contact-row-label">BLOG</span>
+              <span class="contact-row-value">hashnode.dev</span>
+            </a>
+          </div>
+          <div class="pixel-separator">- - - - - - - - - - - - - -</div>
+          <div style="text-align:center;">
+            <button class="pixel-btn primary" id="send-pixel-msg">📡 Send a Pixel Message</button>
+            <p class="hint-text">No DMs yet? Email works just fine.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
-      © 2026 Mehran RedRose — Neon Fluent Portfolio
-    </footer>
+  </main>
 
-    <nav class="bottom-nav">
-      <a class="nav-item" href="#about">
-        <i data-lucide="home"></i>
-        <span>Home</span>
-      </a>
+  <footer class="pixel-footer">
+    <span>© 2025 mehranredrose · vanilla HTML/CSS/JS · no webpack was harmed</span>
+  </footer>
 
-      <a class="nav-item" href="#projects">
-        <i data-lucide="folder-kanban"></i>
-        <span>Projects</span>
-      </a>
-
-      <a class="nav-item" href="#skills">
-        <i data-lucide="cpu"></i>
-        <span>Skills</span>
-      </a>
-
-      <a class="nav-item" href="#contacts">
-        <i data-lucide="mail"></i>
-        <span>Contact</span>
-      </a>
-    </nav>
-
-    <script src="assets/js/main.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        lucide.createIcons();
-      });
-    </script>
-  </body>
+  <script src="js/main.js"></script>
+</body>
 </html>

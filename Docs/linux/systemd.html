@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Linux / Systemd — mehranredrose docs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
+  <style>
+    body { background:#0F1722; color:#E8E8E8; font-family:'Courier New',monospace; max-width:800px; margin:0 auto; padding:2rem; }
+    h1,h2 { font-family:'Press Start 2P',monospace; color:#38BDF8; font-size:0.8rem; margin:1.5rem 0 0.8rem; }
+    h1 { font-size:1rem; }
+    code,pre { background:#0A1018; border:1px solid #3A4A5A; padding:0.2em 0.4em; color:#A3E635; }
+    pre { padding:1rem; display:block; overflow-x:auto; line-height:1.6; }
+    a { color:#38BDF8; }
+    .back { display:inline-block; margin-bottom:2rem; font-family:'Press Start 2P',monospace; font-size:0.5rem; color:#38BDF8; text-decoration:none; border:2px solid #38BDF8; padding:0.5rem 0.8rem; box-shadow:3px 3px 0 #000; }
+    p { line-height:1.8; font-size:0.85rem; color:#8899AA; margin-bottom:1rem; }
+    table { border-collapse:collapse; width:100%; margin:1rem 0; }
+    td,th { border:1px solid #3A4A5A; padding:0.5rem; font-size:0.75rem; }
+    th { color:#38BDF8; font-family:'Press Start 2P',monospace; font-size:0.5rem; }
+  </style>
+</head>
+<body>
+  <a href="../../index.html#docs" class="back">← Back to Docs</a>
+  <h1>🐧 Linux / Systemd Cheatsheet</h1>
+
+  <h2>Essential commands</h2>
+  <table>
+    <tr><th>Command</th><th>What it does</th></tr>
+    <tr><td><code>systemctl start foo</code></td><td>Start service foo</td></tr>
+    <tr><td><code>systemctl stop foo</code></td><td>Stop service foo</td></tr>
+    <tr><td><code>systemctl enable foo</code></td><td>Auto-start on boot</td></tr>
+    <tr><td><code>systemctl status foo</code></td><td>Show status + recent logs</td></tr>
+    <tr><td><code>journalctl -u foo -f</code></td><td>Follow logs for service</td></tr>
+  </table>
+
+  <h2>Sample unit file</h2>
+  <pre>[Unit]
+Description=WARPture tunnel agent
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/warpture-agent
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target</pre>
+
+  <p>Drop this file at <code>/etc/systemd/system/warpture.service</code>, then run <code>systemctl daemon-reload && systemctl enable --now warpture</code>.</p>
+</body>
+</html>
