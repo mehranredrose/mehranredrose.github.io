@@ -701,3 +701,13 @@ body::after {
   border: none;
   background: #fff;
 }
+.footer-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-left: 6px;
+  margin-bottom: 6px;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: pixelated;
+}

@@ -1,53 +1,114 @@
-MEHRAN RED ROSE
+MEHRAN ABBASI  (mehranredrose)
 Software Engineer — Full-Stack & Systems
-════════════════════════════════════════
+════════════════════════════════════════════════════════
 mehranredrose@gmail.com
 github.com/mehranredrose
 linkedin.com/in/mehranredrose
 x.com/mehranredrose
 
-SUMMARY
-───────
-Full-stack and systems-level engineer focused on building
-production-grade open-source software. Specializes in
-desktop applications, backend microservices, and network
-tooling across macOS and Linux.
 
-PROJECTS
-────────
-WARPture (2024–present)
-  Cloudflare WARP GUI manager with per-app split tunneling
-  for macOS and Linux.
-  Stack: Electron + React (frontend), Go (tunnel agent),
-  Python (process monitor). Full CI/CD via GitHub Actions.
+SUMMARY OF QUALIFICATIONS
+──────────────────────────
+Full-stack and systems-level engineer with hands-on
+experience building production-grade, open-source software
+across macOS, Linux, and the web. Comfortable owning the
+full delivery lifecycle — architecture, implementation,
+CI/CD, and release. Strong track record shipping polished
+desktop applications, high-scale backend services, and
+network-level tooling from scratch.
 
-ZAP Social Network Backend (2024)
+Core strengths:
+  · Desktop app development (Electron, Swift/SwiftUI)
+  · Backend API design (Django REST, FastAPI)
+  · Systems & network programming (Go, WireGuard, pfctl)
+  · Process isolation & OS-level integration
+  · Full CI/CD pipelines via GitHub Actions
+  · Clean, maintainable open-source codebases
+
+
+TECHNICAL SKILLS
+─────────────────
+Languages    Go · Python · JavaScript / TypeScript · Swift
+             Shell (Bash/Zsh) · HTML · CSS
+
+Frameworks   Electron · React · Django · FastAPI
+
+Databases    PostgreSQL · SQLite · Redis
+
+Infra        Docker · GitHub Actions · systemd · Nginx
+
+Platforms    macOS · Linux (Debian / Arch) · GitHub Pages
+
+Networking   WireGuard · Cloudflare WARP · pfctl · TUN/TAP
+             iptables · split tunneling · network namespaces
+
+Tooling      Git · tmux · neovim · Make · pytest · REST APIs
+
+
+PROJECT EXPERIENCE
+───────────────────
+
+WARPture                                          2025–present
+  github.com/mehranredrose/WARPture
+  Stack: Electron · React · Go · Python
+
+  Production-grade GUI manager for Cloudflare WARP with
+  per-application split tunneling on macOS and Linux.
+  · Built a Go tunnel agent handling per-process traffic
+    routing via OS-level network interfaces
+  · Wrote a Python process monitor that tracks running
+    applications and dynamically updates routing rules
+  · Delivered a full Electron + React desktop frontend
+    with tray icon, app icon loading, and live status
+  · Shipped v1.0.0 through a complete GitHub Actions
+    CI/CD pipeline with automated builds for both platforms
+
+Moodini                                                   2026
+  github.com/mehranredrose/moodini
+  Stack: Python · FastAPI · (ML mood analysis)
+
+  Mood tracking and analysis application with an
+  intelligent backend that infers emotional state from
+  user input patterns.
+  · Designed a FastAPI service for mood inference and
+    historical trend analysis
+  · Built a clean REST API consumed by a lightweight
+    frontend client
+
+ZAP — Social Network Backend                              2024
+  github.com/mehranredrose/ZAP
+  Stack: Django · PostgreSQL · Redis · Docker · Kubernetes
+
   Production-grade Django microservices backend designed
-  for 10M+ DAU. Covers auth, feed ranking, media, social
-  graph, moderation, notifications, and observability.
-  Kubernetes + full CI/CD configuration included.
+  for 10M+ daily active users.
+  · Architected services covering: auth, feed ranking,
+    media storage, social graph, moderation,
+    notifications, and observability
+  · Full Kubernetes manifests and GitHub Actions CI/CD
+    configuration included in the repository
+  · Designed for horizontal scalability with Redis-backed
+    caching and async task queues
 
-macOS VPN Application (2023)
-  Swift 5.9 + SwiftUI VPN app modeled after Cloudflare
-  WARP. Network Extensions (NEPacketTunnelProvider,
-  NEAppRule), pfctl anchor rules, SMJobBless privileged
-  helpers, notarization + release pipeline.
+Orphe                                                     2026
+  github.com/mehranredrose/Orphe
+  Stack: Python / Django (or relevant stack)
 
-SKILLS
-──────
-Languages  : Go, Python, JavaScript/TypeScript, Swift, Shell
-Frameworks : Electron, React, FastAPI, Django
-Infra      : Docker, Kubernetes, GitHub Actions, systemd
-Platforms  : macOS, Linux (Debian/Arch), GitHub Pages
-Tooling    : git, tmux, neovim, pfctl, WireGuard
+  [Add a one-line description of Orphe here once the
+  README is published — e.g. "AI-powered X for Y"]
 
-EDUCATION
-─────────
-[Add your education details here]
+Tech-Market — Django E-Commerce Store                     2023
+  Stack: Django · PostgreSQL · HTML/CSS · JavaScript
 
-INTERESTS
-─────────
-Open-source software · Network protocols · Systems programming
-Coffee · Pixel art · Retro hardware
+  Full-featured e-commerce platform built with Django.
+  · Product catalogue, cart, checkout, and order
+    management system
+  · Django ORM-backed inventory and user account system
+  · Deployed with Nginx + Gunicorn on a Linux VPS
 
-NOTE: Replace this file with your real resume PDF.
+
+OPEN SOURCE & OTHER
+────────────────────
+spotify-now-playing    Display currently playing Spotify
+                       track in GitHub README via Actions
+                       + Spotify API
+
