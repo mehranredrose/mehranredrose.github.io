@@ -9,7 +9,7 @@ const htmlEl      = document.documentElement;
 
 function applyTheme(theme) {
   htmlEl.setAttribute('data-theme', theme);
-  toggleIcon.textContent = theme === 'dark' ? '☀️' : '🌙';
+  toggleIcon.src = theme === 'dark' ? 'assets/icons/sun.png' : 'assets/icons/full-moon.png';
   localStorage.setItem('theme', theme);
 }
 applyTheme(localStorage.getItem('theme') || 'dark');
